@@ -1,3 +1,111 @@
-img{
-    width:20px;
+$light: #f5f0ec;
+$dark: #000;
+$gray: #8e8e8e;
+$width: 1125px;
+$shaddow: -5px -5px 6px white, 5px 5px 6px #cc7042;
+
+footer{
+    margin: 1em 0;
+    display:flex;
+    justify-content: space-between;
+
+    .support{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .title{
+          color: $light;
+          font-weight: 600;
+          background-color: $dark;
+          font-size: 12px;
+          padding: .5em;
+        }
+        .appfree{
+            margin-top: 1em;
+            display: flex;
+            align-items: center;
+            p{
+                font-size: 12px;
+              }
+            img{
+                width: 100px;
+                margin-left: 5px;
+            }
+        }
+        a{
+            margin-top: 1em;
+            text-decoration: none;
+            font-size: 12px;
+            color: $dark;
+        }
+        a:hover{
+            cursor: pointer;
+            color: $gray;
+        }
+        figure{
+            margin-top: 1em;
+            img{
+                width:20px;
+                margin-right: 1em;
+            }
+        }
+
+    }
+
+    .about{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        .title{
+            color: $light;
+            font-weight: 600;
+            background-color: $dark;
+            font-size: 12px;
+            padding: .5em;
+          }
+          a{
+            margin-top: 1em;
+            text-decoration: none;
+            font-size: 12px;
+            color: $dark;
+        }
+        a:hover{
+            cursor: pointer;
+            color: $gray;
+        }
+        p{
+            font-size:10px;
+            margin-top: 1em;
+            color: $gray;
+        }
+    }
+    .FAQs{
+        display: flex;
+        .accordion{
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+        }
+        .active, .accordion:hover {
+            background-color: #ccc;
+          }
+          .panel {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+          }
+    }
+    
+
 }
+

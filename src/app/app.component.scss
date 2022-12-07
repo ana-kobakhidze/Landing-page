@@ -2,11 +2,116 @@
 
 $light: #f5f0ec;
 $dark: #000;
-$width: 1680px;
+$gray: #8e8e8e;
+$width: 1125px;
+$shaddow: -5px -5px 6px white, 5px 5px 6px #cc7042;
 
   .app-wrapper{
     display: flex;
     flex-direction: column;
-    background-color: $light;
-    max-width: 1125px;
+    max-width: $width;
   }
+  .main{
+    margin-top: 3em;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h5{
+        font-weight: 600;
+    }
+    h3{
+        font-weight:800;
+        font-size: 3em;
+        text-transform: uppercase;
+        margin-bottom: .5em;
+    }
+    p{
+        color:$gray;
+        margin-bottom: 1em;
+    }
+    button{
+        margin: 1em 0;
+        background-image: linear-gradient(to right, #fec18a , #fe9563);
+        color: $light;
+        border:none;
+        text-transform: uppercase;
+        font-size:smaller;
+        border-radius: 50px;
+        box-shadow: $shaddow;
+        padding: 1em 3em;
+    }
+    button:hover{
+        cursor: pointer;
+        background-image: linear-gradient(to right, #facba2 , #f9ac88);
+    }
+    img{
+        width:50%;
+    }
+  }
+
+  .features{
+    margin-top: 3em;
+
+    h3{
+        font-weight:800;
+        font-size: 3em;
+        text-transform: uppercase;
+        margin-bottom: .5em;
+    }
+    ul{   
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    li{
+        border: 1px solid $dark;
+        border-radius: 10px;
+        width: 15em;
+        height: 7em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    li:hover{
+        border:none;
+        cursor: pointer;
+        box-shadow: $shaddow;
+    }
+    p{
+        letter-spacing: 2px;
+        font-size: 14px;
+        text-align: center;
+    }
+  }
+
+  .proof{
+    margin-top: 5em;
+    background-image: linear-gradient(to right, #fec18a , #fe9563);
+    border:none;
+    border-radius: 10px;
+    box-shadow: $shaddow;
+    padding: 1em 3em;
+
+    .proof-wrapper{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    a{
+        color: $light;
+        font-weight: 800;
+        text-decoration: none;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    img{
+        width: 25%;
+        padding-bottom: 5px;
+    }
+
+  }
+  hr{
+    margin-top:5em;
+}

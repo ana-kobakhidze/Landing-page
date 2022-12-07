@@ -2,36 +2,69 @@
 $light: #f5f0ec;
 $dark: #000;
 $width: 1125px;
+$gray: #8e8e8e;
+$shaddow: -3px -3px 4px white, 3px 3px 4px #cc7042;
 
 header{
     width: $width;
     max-width: 100%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+
     .header-wrapper{
+        margin: 1em 0 .5em;
         display:flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
     }
     .logo{
         max-width: 203px;
     }
-    .main-nav ul {
-        margin: 1em 0 .5em;
+    nav{
+        margin-left: 35rem;
+    }
+    nav ul {
         text-align: center;
     }
-    .main-nav li {
+    nav li {
         display: inline;
+        padding: .3em .1em;
+        color: $dark;
     }
-    .main-nav a {
+
+
+    nav a {
         display: inline-block;
+        padding: .3em 1em;
+        text-decoration: none;
+        color: $dark;
+    }
+    nav li:hover,
+    nav li a:hover{
+        font-weight: 400;
+        color: $gray;
+    }
+    button{
+        background-color: $light;
+        color: $dark;
+        border-radius: 5px;
+        border: 1px solid $dark; 
         padding: .5em 1.5em;
+    }
+    button:hover{
+        border:none;
+        border-radius: 5px;
+        box-shadow: $shaddow;
+        cursor: pointer;
     }
 
 }
-@media (min-width: 960px) {
+@media (max-width: 960px) {
 	header .header-wrapper {
-		justify-content: space-between;
+		justify-content: center;
 	}
+    .logo {
+        flex: 1;
+    }
 }
